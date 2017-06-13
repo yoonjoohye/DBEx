@@ -1,6 +1,7 @@
 package a67yjh00.com.example.lg.dbex;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -46,6 +47,19 @@ public class MainActivity extends AppCompatActivity {
                 sqldb.close();
                 Toast.makeText(MainActivity.this,"저장됨",Toast.LENGTH_LONG).show();
             }
+        });
+        butSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                sqldb=myHelper.getReadableDatabase();
+                String sql="select * from idolTable";
+                Cursor cursor=sqldb.rawQuery(sql,null);
+                String names="Idol 이름"+"\r\n"+"==============="+"\r\n";
+                String counts="Idol 인원수"+"\r\n"+"==============="+"\r\n";
+                while(cursor.moveToNext()){
+
+                }
+             }
         });
     }
     class MyDBHelper extends SQLiteOpenHelper{
