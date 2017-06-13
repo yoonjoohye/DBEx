@@ -8,65 +8,70 @@
     tools:context="a67yjh00.com.example.lg.dbex.MainActivity">
 
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="그룹명:"
-            android:layout_marginLeft="20dp"
+            android:text="그룹명: "
             />
         <EditText
             android:id="@+id/edit_group_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             />
-    />
+    </LinearLayout>
+
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="인원수:"
-        android:layout_marginLeft="20dp"
-        />
-    <EditText
-        android:id="@+id/edit_group_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        />
-    />
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="인원수: "
+            />
+        <EditText
+            android:id="@+id/edit_group_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
     <LinearLayout
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-    <Button
-        android:id="@+id/but_init"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="초기화"
-        />
-    <Button
-        android:id="@+id/but_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="입 력"
-        />
-    <Button
-        android:id="@+id/but_select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="조 회"
-        />
-    />
+        >
+        <Button
+            android:id="@+id/but_init"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초기화"
+            />
+        <Button
+            android:id="@+id/but_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입  력"
+            />
+        <Button
+            android:id="@+id/but_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조  회"
+            />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_margin="10dp"
         android:layout_width="match_parent"
@@ -79,12 +84,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:lines="13"
+            android:enabled="false"
             />
         <EditText
             android:id="@+id/edit_result_count"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:lines="13"
+            android:enabled="false"
             />
     </LinearLayout>
 
