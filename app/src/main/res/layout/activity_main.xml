@@ -46,7 +46,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -54,25 +53,38 @@
         >
         <Button
             android:id="@+id/but_init"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="초기화"
             />
         <Button
             android:id="@+id/but_insert"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="입  력"
             />
         <Button
             android:id="@+id/but_select"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="조  회"
+            />
+        <Button
+            android:id="@+id/but_update"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="수 정"
+            />
+        <Button
+            android:id="@+id/but_delete"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="삭 제"
             />
     </LinearLayout>
 
     <LinearLayout
+        android:background="#008805"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -81,6 +93,7 @@
         >
         <EditText
             android:id="@+id/edit_result_name"
+            android:textColor="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -89,6 +102,7 @@
             />
         <EditText
             android:id="@+id/edit_result_count"
+            android:textColor="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
