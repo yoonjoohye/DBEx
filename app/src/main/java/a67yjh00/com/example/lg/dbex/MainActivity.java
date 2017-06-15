@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         butInsert=(Button)findViewById(R.id.but_insert);
         butSelect=(Button)findViewById(R.id.but_select);
         //DB 생성
-        myHelper=new MyDBHelper(this);//익명클래스
+        myHelper=new MyDBHelper(this);
         //기존의 테이블이 존재하면 삭제하고 테이블을 새로 생성한다.
         butInit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {//익명클래스
                 sqldb=myHelper.getWritableDatabase();
                 myHelper.onUpgrade(sqldb,1,2);
                 sqldb.close();
@@ -57,8 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 String names="Idol 이름"+"\r\n"+"==============="+"\r\n";
                 String counts="Idol 인원수"+"\r\n"+"==============="+"\r\n";
                 while(cursor.moveToNext()){
-
+                    names+=cursor.getString(0)+"\r\n";
+                    counts+=cursor.getInt(1)+"\r\n";
                 }
+                editResultName.setText(names);
+                editResultCount.setText(counts);
+                cursor.close();
+                sqldb.close();
              }
         });
     }
@@ -75,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         //이미 idolTable이 존재한다면 기존의 테이블을 삭제하고, 새로 테이블을 만들 때 호출
         @Override
         public void onUpgrade(SQLiteDatabase db, int i, int j) {
-            String sql="drop table if exist idolTable";
+            String sql="drop table if exists idolTable";
             db.execSQL(sql);
             onCreate(db);
         }//내부클래스
